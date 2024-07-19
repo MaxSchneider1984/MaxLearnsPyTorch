@@ -35,10 +35,16 @@ print(F"T[0]: {T[0]}")
 
 # Random Tensors
 # ...are used by neural networks as starting point and will be updated when they look at data to learn
-
 R_T = torch.rand(3, 4)
 print("===== Random Tensor =====")
 print(F"R_T: {R_T}")
-print(F"RT.ndim: {R_T.ndim}")
+print(F"R_T.ndim: {R_T.ndim}")
 print(F"R_T.shape: {R_T.shape}")
 print(F"R_T[0]: {R_T[0]}")
+
+# Random tensor with similar shape to an image tensor
+R_T_IMAGE = torch.rand(size=(224, 224, 3)) # height, width, colour channels
+print("===== Random Image Tensor =====")
+print(F"R_T_IMAGE: {R_T_IMAGE}")
+print(F"R_T_IMAGE.ndim: {R_T_IMAGE.ndim}")
+print(F"R_T_IMAGE.shape: {R_T_IMAGE.shape}")
